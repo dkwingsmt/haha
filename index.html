@@ -21,47 +21,84 @@
           <h1 id="project_title">蛤蛤体生成器</h1>
           <h2 id="project_tagline"></h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/dkwingsmt/haha/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/dkwingsmt/haha/tarball/master">Download this project as a tar.gz file</a>
-            </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+          <table style="width:768px">
+              <tr>
+                  <th style="width:50%;">
+          <!--<h3>请依次填入以下信息……</h3>-->
+    <form name="info_form">
+    <p>标题：
+        <input type="text" name="i_from" value="" style="width:100px;" /> 
+        怒斥 
+        <input type="text" name="i_to" value="" style="width:100px;" />
+    </p>
+    <p>正文</p>
+    <ol>
+        <li>
+            <input type="text" name="i_affair" value="" style="width:150px;" /> 
+            好不好啊？
+        </li><li>
+            <input type="text" name="i_who" value="" style="width:150px;" /> 
+            也支持吗？
+        </li><li> 
+            会不会给人感觉是
+            <input type="text" name="i_qinding" value="" style="width:120px;" /> 
+            呀？
+        </li><li> 
+            我不是要
+            <input type="text" name="i_qinding2" value="" style="width:70px;" /> 
+        </li><li> 
+            按照
+            <input type="text" name="i_accord1" value="" style="width:100px;" /> 
+            和 
+            <input type="text" name="i_accord2" value="" style="width:100px;" /> 
+        </li><li> 
+            <input type="text" name="i_west" value="" style="width:80px;" />
+            哪个
+            <input type="text" name="i_westcountry" value="" style="width:80px;" />
+            我没
+            <input type="text" name="i_went" value="" style="width:60px;" />
+            过
+        </li><li> 
+            <input type="text" name="i_usa" value="" style="width:80px;" /> 
+            的 
+            <input type="text" name="i_wallace" value="" style="width:80px;" /> 
+            比你们高到哪里去
+        </li><li> 
+            比
+            <input type="text" name="i_faster" value="" style="width:100px;" /> 
+            跑得快
+        </li><li> 
+            我今天作为一个
+            <input type="text" name="i_zhangzhe" value="" style="width:120px;" /> 
+        </li><li> 
+            <input type="text" name="i_hk" value="" style="width:100px;" />
+            现在是
+            <input type="text" name="i_iden" value="" style="width:130px;" />
+        </li><li> 
+            <input type="text" name="i_affair2" value="" style="width:80px;" />
+            也要按照
+            <input type="text" name="i_law" value="" style="width:80px;" />
+        </li><li> 
+            我们的
+            <input type="text" name="i_decision" value="" style="width:100px;" />
+            也是很重要的
+        </li>
+    </ol>
+    <input type="button" name="button" value="生成" onclick="generate()" style="width:100px;" />
+    </form>
+              </th>
+              <th style="width:49%">
+        <textarea name="result" id="result" readonly="readonly" style="width:100%; height: 600px;"/>
+        </textarea>
+              </th>
+              </tr>
+          </table>
       </section>
     </div>
 
@@ -69,11 +106,165 @@ $ git checkout gh-pages
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">蛤蛤体生成器 maintained by <a href="https://github.com/dkwingsmt">dkwingsmt</a></p>
+        <p>Inspired by <a href="http://photo.renren.com/photo/302760940/photo-7757506381">张成愈</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
 
+    <script>
+
+function get_inputs() {
+    return document.querySelectorAll("form > p > input, form > ol > li > input");
+}
+
+var init_arrays = [];
+
+init_arrays.push({
+    i_from: "江主席",
+    i_to: "香港记者",
+    i_affair: "董先生连任",
+    i_who: "中央",
+    i_qinding: "你们内定钦点董先生",
+    i_qinding2: "钦定",
+    i_accord1: "香港的基本法",
+    i_accord2: "按照选举法",
+    i_west: "西方",
+    i_westcountry: "国家",
+    i_went: "去",
+    i_usa: "美国",
+    i_wallace: "华莱士",
+    i_faster: "西方记者",
+    i_zhangzhe: "长者",
+    i_hk: "董先生",
+    i_iden: "特首",
+    i_affair2: "连任",
+    i_law: "香港的法律",
+    i_decision: "决定权",
+});
+
+init_arrays.push({
+    i_from: "清华同学",
+    i_to: "北大同学",
+    i_affair: "在隔壁建px化工厂",
+    i_who: "同学们",
+    i_qinding: "黑北大",
+    i_qinding2: "黑北大",
+    i_accord1: "环境保护法",
+    i_accord2: "拆迁法",
+    i_west: "全国",
+    i_westcountry: "大学",
+    i_went: "去",
+    i_usa: "复旦大学",
+    i_wallace: "学生",
+    i_faster: "黑交大的复旦学生",
+    i_zhangzhe: "清华学子",
+    i_hk: "px",
+    i_iden: "化工业的支柱",
+    i_affair2: "建化工厂",
+    i_law: "相关法律法规",
+    i_decision: "决定权",
+});
+
+init_arrays.push({
+    i_from: "奶茶MM",
+    i_to: "媒体记者",
+    i_affair: "和刘先生谈恋爱",
+    i_who: "家人",
+    i_qinding: "给京东炒作",
+    i_qinding2: "炒作",
+    i_accord1: "广告法",
+    i_accord2: "公司法",
+    i_west: "西方",
+    i_westcountry: "名人",
+    i_went: "采访",
+    i_usa: "国际奥委会",
+    i_wallace: "罗格",
+    i_faster: "西方的狗仔队",
+    i_zhangzhe: "晚辈",
+    i_hk: "刘先生",
+    i_iden: "京东CEO",
+    i_affair2: "谈恋爱",
+    i_law: "中国的相关法律",
+    i_decision: "恋爱权",
+});
+
+init_arrays.push({
+    i_from: "童哲",
+    i_to: "媒体记者",
+    i_affair: "陈一舟给万门大学注资",
+    i_who: "志愿者们",
+    i_qinding: "把志愿者们给出卖了",
+    i_qinding2: "出卖志愿者",
+    i_accord1: "合同法",
+    i_accord2: "公司法",
+    i_west: "世界上",
+    i_westcountry: "组织",
+    i_went: "调查",
+    i_usa: "AIESEC",
+    i_wallace: "主席",
+    i_faster: "人人的五毛党",
+    i_zhangzhe: "人人下属公司的全职员工",
+    i_hk: "陈一舟",
+    i_iden: "人人的CEO",
+    i_affair2: "注资",
+    i_law: "中国的相关法律",
+    i_decision: "决定权",
+});
+
+
+function initialize(init_array) {
+
+    var inputs = get_inputs();
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].value = init_array[inputs[i].name];
+    }
+    generate();
+}
+
+function generate() {
+    var inputs = get_inputs();
+    var result_text = result;
+
+    var template = "";
+    template += "{{i_to}}：{{i_from}}，你觉得{{i_affair}}好不好呀？ \n\n";
+    template += "{{i_from}}：吼啊！ \n\n";
+    template += "{{i_to}}：{{i_who}}也支持吗？\n\n";
+    template += "{{i_from}}：当然啦！ \n\n";
+    template += "{{i_to}}：那么早就说要{{i_affair2}}，会不会给人感觉是{{i_qinding}}？\n\n";
+    template += "{{i_from}}：任何事，也要按照{{i_accord1}}，按照{{i_accord2}}来进行。";
+    template += "刚才你问我，我可以回答一句「无可奉告」，但是你们又不高兴，我怎么办？";
+    template += "我讲的意思不是要{{i_qinding2}}。";
+    template += "你问我支持不支持，我说支持。我就明确告诉你这一点。";
+    template += "我感觉你们新闻界还需要学习，你们毕竟还是 too young ，你明白这意思吧？";
+    template += "我告诉你们我是身经百战了，见得多了，{{i_west}}哪一个{{i_westcountry}}我没有{{i_went}}过？";
+    template += "你们要知道，{{i_usa}}的{{i_wallace}}，比你们不知道要高到哪里去了，我跟他谈笑风生。";
+    template += "所以说媒体还是要提高自己的知识水平，识得唔识得啊？我为你们感到拙计呀……";
+    template += "你们有一个好，全世界跑到什么地方，你们比{{i_faster}}跑得还快，";
+    template += "但是问来问去的问题呀，都 too simple ， sometimes naive ！懂了没有？\n\n";
+    template += "{{i_to}}：可是能不能说一下为什么支持{{i_affair}}？\n\n";
+    template += "{{i_from}}：我很抱歉，我今天是作为一个{{i_zhangzhe}}跟你们讲，";
+    template += "我不是新闻工作者，但是我见得太多了。我有必要告诉你们一些人生的经验……";
+    template += "中国有一句话叫「闷声发大财」，我就什么话也不说，这是最好的。";
+    template += "但是我想我见到你们这样热情，一句话不说也不好。";
+    template += "在宣传上将来如果你们报道上有偏差，你们要负责任。";
+    template += "我没有说要{{i_qinding}}，没有任何这个意思，但你们一定要问我对{{i_hk}}支持不支持，";
+    template += "他现在是{{i_iden}}，我们怎么能不支持{{i_iden}}？\n\n";
+    template += "{{i_to}}：但是如果说{{i_affair2}}呢？\n\n";
+    template += "{{i_from}}：{{i_affair2}}也得按照{{i_law}}，对不对？";
+    template += "当然我们的{{i_decision}}也是很重要的。";
+    template += "到那时候我们会表态的。明白这意思吗？";
+    template += "你们不要想喜欢弄个大新闻，说现在已经{{i_qinding2}}了，把我批判一番，你们啊，naive！";
+    template += " I'm angry！你们这样子是不行的！我今天算是得罪了你们一下。";
     
+    for (var i = 0; i < inputs.length; i++) {
+        var regexp = new RegExp("\{\{"+inputs[i].name+"\}\}", "g");
+        template = template.replace(regexp, inputs[i].value, "g");
+    }
+    result_text.value = template;
+}
+
+initialize(init_arrays[Math.floor(Math.random() * init_arrays.length)]);
+    </script>
 
   </body>
 </html>

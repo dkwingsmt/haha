@@ -225,33 +225,29 @@ dl p {
 }
 
 hr {
-  height: 1px;
-  margin-bottom: 5px;
   border: none;
-  background: url('../images/bg_hr.png') repeat-x center;
 }
 
 table {
-  border: 1px solid #373737;
-  margin-bottom: 20px;
+  border: 0px;
   text-align: left;
+  vertical-align: top;
  }
 
 th {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding: 10px;
-  background: #373737;
-  color: #fff;
- }
+    padding: 0;
+  vertical-align: top;
+}
 
 td {
-  padding: 10px;
-  border: 1px solid #373737;
+  padding: 0px;
+  border: 0px;
+  vertical-align: top;
  }
 
 form {
-  background: #f2f2f2;
-  padding: 20px;
+  padding: 0px;
+  vertical-align: top;
 }
 
 /*******************************************************************************
@@ -264,7 +260,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 768px;
   padding: 20px 10px;
   margin: 0 auto;
 }
