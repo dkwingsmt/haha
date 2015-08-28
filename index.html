@@ -88,6 +88,8 @@
             我们的
             <input type="text" name="i_decision" value="" style="width:100px;" />
             也是很重要的
+        </li><li>
+            我不是<input type="text" name="i_job" value="" style="width:100px;" />工作者
         </li>
     </ol>
     <input type="button" name="button" value="生成" onclick="generate()" style="width:100px;" />
@@ -140,6 +142,7 @@ init_arrays.push({
     i_affair2: "连任",
     i_law: "香港的法律",
     i_decision: "决定权",
+    i_job: "新闻"
 });
 
 init_arrays.push({
@@ -163,6 +166,7 @@ init_arrays.push({
     i_affair2: "建化工厂",
     i_law: "相关法律法规",
     i_decision: "决定权",
+    i_job: "文化"
 });
 
 init_arrays.push({
@@ -186,6 +190,7 @@ init_arrays.push({
     i_affair2: "谈恋爱",
     i_law: "中国的相关法律",
     i_decision: "恋爱权",
+    i_job: "新闻"
 });
 
 init_arrays.push({
@@ -209,6 +214,7 @@ init_arrays.push({
     i_affair2: "注资",
     i_law: "中国的相关法律",
     i_decision: "决定权",
+    i_job: "新闻"
 });
 
 
@@ -235,7 +241,7 @@ function generate() {
     template += "刚才你问我，我可以回答一句「无可奉告」，但是你们又不高兴，我怎么办？";
     template += "我讲的意思不是要{{i_qinding2}}。";
     template += "你问我支持不支持，我说支持。我就明确告诉你这一点。";
-    template += "我感觉你们新闻界还需要学习，你们毕竟还是 too young ，你明白这意思吧？";
+    template += "我感觉你们{{i_job}}界还需要学习，你们毕竟还是 too young ，你明白这意思吧？";
     template += "我告诉你们我是身经百战了，见得多了，{{i_west}}哪一个{{i_westcountry}}我没有{{i_went}}过？";
     template += "你们要知道，{{i_usa}}的{{i_wallace}}，比你们不知道要高到哪里去了，我跟他谈笑风生。";
     template += "所以说媒体还是要提高自己的知识水平，识得唔识得啊？我为你们感到拙计呀……";
@@ -243,7 +249,7 @@ function generate() {
     template += "但是问来问去的问题呀，都 too simple ， sometimes naive ！懂了没有？\n\n";
     template += "{{i_to}}：可是能不能说一下为什么支持{{i_affair}}？\n\n";
     template += "{{i_from}}：我很抱歉，我今天是作为一个{{i_zhangzhe}}跟你们讲，";
-    template += "我不是新闻工作者，但是我见得太多了。我有必要告诉你们一些人生的经验……";
+    template += "我不是{{i_job}}工作者，但是我见得太多了。我有必要告诉你们一些人生的经验……";
     template += "中国有一句话叫「闷声发大财」，我就什么话也不说，这是最好的。";
     template += "但是我想我见到你们这样热情，一句话不说也不好。";
     template += "在宣传上将来如果你们报道上有偏差，你们要负责任。";
@@ -255,7 +261,7 @@ function generate() {
     template += "到那时候我们会表态的。明白这意思吗？";
     template += "你们不要想喜欢弄个大新闻，说现在已经{{i_qinding2}}了，把我批判一番，你们啊，naive！";
     template += " I'm angry！你们这样子是不行的！我今天算是得罪了你们一下。";
-    
+
     for (var i = 0; i < inputs.length; i++) {
         var regexp = new RegExp("\{\{"+inputs[i].name+"\}\}", "g");
         template = template.replace(regexp, inputs[i].value, "g");
