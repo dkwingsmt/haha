@@ -225,6 +225,7 @@ function initialize(init_array) {
     var inputs = get_inputs();
     for(var i = 0; i < inputs.length; i++) {
         inputs[i].value = init_array[inputs[i].name];
+        inputs[i].oninput = generate
     }
     generate();
 }
