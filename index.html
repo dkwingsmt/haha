@@ -58,17 +58,19 @@
             ，按照
             <input type="text" name="i_accord2" value="" style="width:100px;" /> 
         </li><li> 
-            <input type="text" name="i_west" value="" style="width:80px;" />
+            <input type="text" name="i_west" value="" style="width:60px;" />
             哪个
             <input type="text" name="i_westcountry" value="" style="width:80px;" />
             我没
             <input type="text" name="i_went" value="" style="width:60px;" />
             过
         </li><li> 
-            <input type="text" name="i_usa" value="" style="width:80px;" /> 
+            <input type="text" name="i_usa" value="" style="width:60px;" /> 
             的 
             <input type="text" name="i_wallace" value="" style="width:80px;" /> 
-            比你们高到哪里去
+            比你们
+            <input type="text" name="i_high" value="" style="width:45px;" />
+            到哪里去
         </li><li> 
             比
             <input type="text" name="i_faster" value="" style="width:100px;" /> 
@@ -92,7 +94,6 @@
             我不是<input type="text" name="i_job" value="" style="width:100px;" />工作者
         </li>
     </ol>
-    <input type="button" name="button" value="生成" onclick="generate()" style="width:100px;" />
     </form>
               </th>
               <th style="width:49%">
@@ -135,6 +136,7 @@ init_arrays.push({
     i_went: "去",
     i_usa: "美国",
     i_wallace: "华莱士",
+    i_high: "高",
     i_faster: "西方记者",
     i_zhangzhe: "长者",
     i_hk: "董先生",
@@ -160,6 +162,7 @@ init_arrays.push({
     i_went: "去",
     i_usa: "复旦大学",
     i_wallace: "学生",
+    i_high: "高",
     i_faster: "黑交大的复旦学生",
     i_zhangzhe: "清华学子",
     i_hk: "px",
@@ -184,6 +187,7 @@ init_arrays.push({
     i_went: "采访",
     i_usa: "国际奥委会",
     i_wallace: "罗格",
+    i_high: "高",
     i_faster: "西方的狗仔队",
     i_zhangzhe: "晚辈",
     i_hk: "刘先生",
@@ -208,6 +212,7 @@ init_arrays.push({
     i_went: "调查",
     i_usa: "AIESEC",
     i_wallace: "主席",
+    i_high: "高",
     i_faster: "人人的五毛党",
     i_zhangzhe: "人人下属公司的全职员工",
     i_hk: "陈一舟",
@@ -225,6 +230,7 @@ function initialize(init_array) {
     var inputs = get_inputs();
     for(var i = 0; i < inputs.length; i++) {
         inputs[i].value = init_array[inputs[i].name];
+        inputs[i].oninput = generate
     }
     generate();
 }
@@ -245,7 +251,7 @@ function generate() {
     template += "你问我支持不支持，我说支持。我就明确的告诉你这一点。";
     template += "我感觉你们{{i_job}}界还需要学习，你们毕竟还是 too young ，你明白这意思吧？";
     template += "我告诉你们我是身经百战了，见得多了，{{i_west}}哪一个{{i_westcountry}}我没有{{i_went}}过？";
-    template += "你们要知道，{{i_usa}}的{{i_wallace}}，比你们不知道要高到哪里去了，我跟他谈笑风生。";
+    template += "你们要知道，{{i_usa}}的{{i_wallace}}，比你们不知道要{{i_high}}到哪里去了，我跟他谈笑风生。";
     template += "所以说媒体还是要提高自己的知识水平，识得唔识得啊？我为你们感到拙计呀……";
     template += "你们有一个好，全世界跑到什么地方，你们比{{i_faster}}跑得还快，";
     template += "但是问来问去的问题呀，都 too simple ， sometimes naive ！懂了没有？\n\n";
